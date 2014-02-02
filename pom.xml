@@ -13,7 +13,7 @@
         <javax-servlet.version>2.5</javax-servlet.version>
         <javax-validation.version>1.1.0.Final</javax-validation.version>
 
-        <spring.version>3.2.6.RELEASE</spring.version>
+        <org.springframework.version>3.2.6.RELEASE</org.springframework.version>
         <spring-security.version>3.2.0.RELEASE</spring-security.version>
         <spring-data-mongodb.version>1.3.3.RELEASE</spring-data-mongodb.version>
         <thymeleaf.version>2.1.2.RELEASE</thymeleaf.version>
@@ -26,24 +26,55 @@
     </properties>
 
     <dependencies>
-        <!-- Java Servlet API -->
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>servlet-api</artifactId>
-            <version>${javax-servlet.version}</version>
-        </dependency>
-
+        
         <!-- Spring framework (Core - MVC - Security - Data for mongodb)-->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
-            <version>${spring.version}</version>
+            <version>${org.springframework.version}</version>
         </dependency>
-
+        
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-webmvc</artifactId>
-            <version>${spring.version}</version>
+        	<groupId>org.springframework</groupId>
+        	<artifactId>spring-web</artifactId>
+        	<version>${org.springframework.version}</version>
+        </dependency>
+        
+        <dependency>
+        	<groupId>org.springframework</groupId>
+        	<artifactId>spring-webmvc</artifactId>
+        	<version>${org.springframework.version}</version>
+        </dependency>
+        
+        <dependency>
+        	<groupId>org.springframework</groupId>
+        	<artifactId>spring-context</artifactId>
+        	<version>${org.springframework.version}</version>
+        </dependency>
+        
+        <dependency>
+        	<groupId>org.springframework</groupId>
+        	<artifactId>spring-orm</artifactId>
+        	<version>${org.springframework.version}</version>
+        </dependency>
+        
+        <dependency>
+        	<groupId>org.springframework</groupId>
+        	<artifactId>spring-test</artifactId>
+        	<version>${org.springframework.version}</version>
+        </dependency>
+        
+        <dependency>
+        	<groupId>org.springframework</groupId>
+        	<artifactId>spring-jdbc</artifactId>
+        	<version>${org.springframework.version}</version>
+        </dependency>
+        
+        <!-- Java Servlet API -->
+        <dependency>
+        	<groupId>javax.servlet</groupId>
+        	<artifactId>javax.servlet-api</artifactId>
+        	<version>3.0.1</version>
         </dependency>
 
         <dependency>
@@ -58,20 +89,6 @@
             <version>${spring-security.version}</version>
         </dependency>
 
-        <!-- mongodb java driver -->
-		<dependency>
-			<groupId>org.mongodb</groupId>
-			<artifactId>mongo-java-driver</artifactId>
-			<version>2.11.0</version>
-		</dependency>
-	
-		<!-- Spring data mongodb -->
-		<dependency>
-			<groupId>org.springframework.data</groupId>
-			<artifactId>spring-data-mongodb</artifactId>
-			<version>1.2.0.RELEASE</version>
-		</dependency>
-	
 		<dependency>
 			<groupId>cglib</groupId>
 			<artifactId>cglib</artifactId>
@@ -91,19 +108,6 @@
             <version>${thymeleaf.version}</version>
         </dependency>
 
-        <!-- Validation : Api + Hibernate validator -->
-        <dependency>
-            <groupId>javax.validation</groupId>
-            <artifactId>validation-api</artifactId>
-            <version>${javax-validation.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-validator</artifactId>
-            <version>${hibernate-validator.version}</version>
-        </dependency>
-
         <!-- Test -->
         <!-- Pruebas Unitarias y de Integración -->
 	  	<dependency>
@@ -118,20 +122,6 @@
 	  		<version>2.0b1</version>
 	  		<scope>test</scope>
 	  	</dependency>
-        
-        <!-- Validacion Vista -->
-		<dependency>
-			<groupId>javax.validation</groupId>
-		    <artifactId>validation-api</artifactId>
-		    <version>1.0.0.GA</version>
-		</dependency>
-		
-		<!-- Excel -->
-		<dependency>
-			<groupId>net.sourceforge.jexcelapi</groupId>
-			<artifactId>jxl</artifactId>
-			<version>2.6.12</version>
-		</dependency>
 	
 		<!-- Data Mapper package is a high-performance data binding package built 
 		on Jackson JSON processor -->
@@ -185,7 +175,39 @@
 	    	<type>jar</type>
 	    	<scope>compile</scope>
 	    </dependency>
-	
+	    
+	    <!-- Librerias de Hibernate -->
+	    <dependency>
+	    	<groupId>org.hibernate</groupId>
+	    	<artifactId>hibernate-core</artifactId>
+	    	<version>4.1.5.Final</version>
+	    </dependency>
+	    
+	    <dependency>
+	    	<groupId>org.hibernate</groupId>
+	    	<artifactId>hibernate-validator</artifactId>
+	    	<version>4.2.0.Final</version>
+	    </dependency>
+	    
+	    <dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>4.2.8.Final</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-annotations</artifactId>
+			<version>3.5.6-Final</version>
+		</dependency>
+		
+	    
+	    <dependency>
+	    	<groupId>mysql</groupId>
+	    	<artifactId>mysql-connector-java</artifactId>
+	    	<version>5.1.9</version>
+	    </dependency>
+
     </dependencies>
 
     <build>
