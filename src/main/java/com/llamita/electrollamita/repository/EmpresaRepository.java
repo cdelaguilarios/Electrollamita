@@ -16,8 +16,7 @@ public class EmpresaRepository {
 	
 	@Autowired
 	private SessionFactory sessionFactory;
-	
-	@Transactional
+
 	public void addEmpresa(Empresa empresa){
 		try{
 		    Session session = sessionFactory.getCurrentSession();
