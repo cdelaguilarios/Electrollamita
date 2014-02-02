@@ -89,12 +89,6 @@
             <version>${spring-security.version}</version>
         </dependency>
 
-		<dependency>
-			<groupId>cglib</groupId>
-			<artifactId>cglib</artifactId>
-			<version>2.2.2</version>
-		</dependency>
-
         <!-- Thymeleaf Template Engine (Core - Integration with Spring Framework)-->
         <dependency>
             <groupId>org.thymeleaf</groupId>
@@ -116,6 +110,7 @@
 	  		<version>4.8</version>
 	  		<scope>test</scope>
 	  	</dependency>
+
 	  	<dependency>
 	  		<groupId>org.seleniumhq.selenium</groupId>
 	  		<artifactId>selenium</artifactId>
@@ -141,7 +136,7 @@
 			<type>jar</type>
 			<scope>compile</scope>
 		</dependency>
-			
+
 		<!-- Logger -->
 	    <dependency>
 	    	<groupId>log4j</groupId>
@@ -160,7 +155,8 @@
 	    	<version>${slf4j.version}</version>
 	    	<type>jar</type>
 	    	<scope>compile</scope>
-	    </dependency> 
+	    </dependency>
+
 	    <dependency>
 	    	<groupId>org.slf4j</groupId>
 	    	<artifactId>slf4j-log4j12</artifactId>
@@ -168,6 +164,7 @@
 	    	<type>jar</type>
 	    	<scope>compile</scope>
 	    </dependency>
+
 	    <dependency>
 	    	<groupId>org.slf4j</groupId>
 	    	<artifactId>jcl-over-slf4j</artifactId>
@@ -212,27 +209,25 @@
 
     <build>
         <finalName>electrollamita</finalName>
-        
         <plugins>
-		<plugin>
-			<artifactId>maven-compiler-plugin</artifactId>
-			<version>3.0</version>
-			<configuration>
-				<source>1.6</source>
-				<target>1.6</target>
-			</configuration>
-		</plugin>
-		<plugin>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-eclipse-plugin</artifactId>
-			<version>2.9</version>
-			<configuration>
-				<downloadSources>true</downloadSources>
-				<downloadJavadocs>true</downloadJavadocs>
-			</configuration>
-		</plugin>
-	</plugins>
-        
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.0</version>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-eclipse-plugin</artifactId>
+                <version>2.9</version>
+                <configuration>
+                    <downloadSources>true</downloadSources>
+                    <downloadJavadocs>true</downloadJavadocs>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
 </project>
 
