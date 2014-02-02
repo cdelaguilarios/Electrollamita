@@ -58,25 +58,6 @@
             <version>${spring-security.version}</version>
         </dependency>
 
-        <!-- mongodb java driver -->
-		<dependency>
-			<groupId>org.mongodb</groupId>
-			<artifactId>mongo-java-driver</artifactId>
-			<version>2.11.0</version>
-		</dependency>
-	
-		<!-- Spring data mongodb -->
-		<dependency>
-			<groupId>org.springframework.data</groupId>
-			<artifactId>spring-data-mongodb</artifactId>
-			<version>1.2.0.RELEASE</version>
-		</dependency>
-	
-		<dependency>
-			<groupId>cglib</groupId>
-			<artifactId>cglib</artifactId>
-			<version>2.2.2</version>
-		</dependency>
 
         <!-- Thymeleaf Template Engine (Core - Integration with Spring Framework)-->
         <dependency>
@@ -112,12 +93,6 @@
 	  		<version>4.8</version>
 	  		<scope>test</scope>
 	  	</dependency>
-	  	<dependency>
-	  		<groupId>org.seleniumhq.selenium</groupId>
-	  		<artifactId>selenium</artifactId>
-	  		<version>2.0b1</version>
-	  		<scope>test</scope>
-	  	</dependency>
         
         <!-- Validacion Vista -->
 		<dependency>
@@ -125,33 +100,7 @@
 		    <artifactId>validation-api</artifactId>
 		    <version>1.0.0.GA</version>
 		</dependency>
-		
-		<!-- Excel -->
-		<dependency>
-			<groupId>net.sourceforge.jexcelapi</groupId>
-			<artifactId>jxl</artifactId>
-			<version>2.6.12</version>
-		</dependency>
-	
-		<!-- Data Mapper package is a high-performance data binding package built 
-		on Jackson JSON processor -->
-		<dependency>
-			<groupId>org.codehaus.jackson</groupId>
-			<artifactId>jackson-mapper-asl</artifactId>
-			<version>${jackson.version}</version>
-			<type>jar</type>
-			<scope>compile</scope>
-		</dependency>
-	
-		<!-- Jackson is a high-performance JSON processor (parser, generator) -->
-		<dependency>
-			<groupId>org.codehaus.jackson</groupId>
-			<artifactId>jackson-core-asl</artifactId>
-			<version>${jackson.version}</version>
-			<type>jar</type>
-			<scope>compile</scope>
-		</dependency>
-			
+
 		<!-- Logger -->
 	    <dependency>
 	    	<groupId>log4j</groupId>
@@ -170,7 +119,8 @@
 	    	<version>${slf4j.version}</version>
 	    	<type>jar</type>
 	    	<scope>compile</scope>
-	    </dependency> 
+	    </dependency>
+
 	    <dependency>
 	    	<groupId>org.slf4j</groupId>
 	    	<artifactId>slf4j-log4j12</artifactId>
@@ -178,6 +128,7 @@
 	    	<type>jar</type>
 	    	<scope>compile</scope>
 	    </dependency>
+
 	    <dependency>
 	    	<groupId>org.slf4j</groupId>
 	    	<artifactId>jcl-over-slf4j</artifactId>
@@ -185,32 +136,29 @@
 	    	<type>jar</type>
 	    	<scope>compile</scope>
 	    </dependency>
-	
     </dependencies>
 
     <build>
         <finalName>electrollamita</finalName>
-        
         <plugins>
-		<plugin>
-			<artifactId>maven-compiler-plugin</artifactId>
-			<version>3.0</version>
-			<configuration>
-				<source>1.6</source>
-				<target>1.6</target>
-			</configuration>
-		</plugin>
-		<plugin>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-eclipse-plugin</artifactId>
-			<version>2.9</version>
-			<configuration>
-				<downloadSources>true</downloadSources>
-				<downloadJavadocs>true</downloadJavadocs>
-			</configuration>
-		</plugin>
-	</plugins>
-        
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.0</version>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-eclipse-plugin</artifactId>
+                <version>2.9</version>
+                <configuration>
+                    <downloadSources>true</downloadSources>
+                    <downloadJavadocs>true</downloadJavadocs>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
 </project>
 
