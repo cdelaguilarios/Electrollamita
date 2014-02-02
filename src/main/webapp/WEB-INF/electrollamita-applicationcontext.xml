@@ -10,6 +10,8 @@
                            http://www.springframework.org/schema/mvc
                            http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
+	<import resource="electrollamita-hibernate.xml"/>
+
     <context:component-scan base-package="com.llamita.electrollamita"/>
 
     <context:property-placeholder location="classpath:jdbc.properties"

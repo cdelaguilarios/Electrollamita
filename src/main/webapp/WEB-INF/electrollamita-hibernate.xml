@@ -20,6 +20,7 @@
             <list>
                 <value>com.llamita.electrollamita.model.Empresa</value>
             </list>
+
         </property>
         <property name="hibernateProperties">
             <props>
