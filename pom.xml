@@ -101,6 +101,12 @@
             <artifactId>thymeleaf-spring3</artifactId>
             <version>${thymeleaf.version}</version>
         </dependency>
+        
+        <dependency>
+			<groupId>nz.net.ultraq.thymeleaf</groupId>
+			<artifactId>thymeleaf-layout-dialect</artifactId>
+			<version>1.2.2</version>
+		</dependency>
 
         <!-- Test -->
         <!-- Pruebas Unitarias y de Integración -->

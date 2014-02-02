@@ -21,11 +21,14 @@ public class Empresa {
 	@Column(name="VC_CONTRASENA")
 	private String contrasena;
 	
-	@Column(name="VC_RAZONSOCIAL")
+	@Column(name="VC_RAZON_SOCIAL")
 	private String razonSocial;
 	
 	@Column(name="VC_RUC")
 	private String ruc;
+	
+	@Column(name="BT_ESTADO")
+	private boolean estado;
 	
 	public Empresa(){
 		
@@ -70,5 +73,15 @@ public class Empresa {
 	public void setRuc(String ruc) {
 		this.ruc = ruc;
 	}
+
+	public boolean isEstado() {
+		return estado;
+	}
+
+	public void setEstado(boolean estado) {
+		this.estado = estado;
+	}
+	
+	
 	
 }
