@@ -43,26 +43,25 @@
         	<artifactId>spring-orm</artifactId>
         	<version>${org.springframework.version}</version>
         </dependency>
-        
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${org.springframework.version}</version>
+        </dependency>
+
         <dependency>
         	<groupId>org.springframework</groupId>
         	<artifactId>spring-test</artifactId>
         	<version>${org.springframework.version}</version>
         </dependency>
-        
-        <dependency>
-        	<groupId>org.springframework</groupId>
-        	<artifactId>spring-jdbc</artifactId>
-        	<version>${org.springframework.version}</version>
-        </dependency>
-        
+
         <!-- Java Servlet API -->
         <dependency>
         	<groupId>javax.servlet</groupId>
         	<artifactId>javax.servlet-api</artifactId>
         	<version>3.0.1</version>
         </dependency>
-
 
         <!-- Thymeleaf Template Engine (Core - Integration with Spring Framework)-->
         <dependency>
@@ -83,13 +82,25 @@
             <version>1.2.2</version>
         </dependency>
 
+        <!-- Base de datos + DBCP -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.9</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-dbcp</groupId>
+            <artifactId>commons-dbcp</artifactId>
+            <version>1.4</version>
+        </dependency>
+
         <!-- Validation : Api + Hibernate validator -->
         <dependency>
             <groupId>javax.validation</groupId>
             <artifactId>validation-api</artifactId>
             <version>${javax-validation.version}</version>
         </dependency>
-
 
         <!-- Test -->
         <!-- Pruebas Unitarias y de Integración -->
@@ -135,50 +146,20 @@
 	    	<type>jar</type>
 	    	<scope>compile</scope>
 	    </dependency>
-	    
-	    <!-- Librerias de Hibernate -->
-	    <dependency>
-	    	<groupId>org.hibernate</groupId>
-	    	<artifactId>hibernate-core</artifactId>
-	    	<version>4.1.5.Final</version>
-	    </dependency>
-	    
-	    <dependency>
-	    	<groupId>org.hibernate</groupId>
-	    	<artifactId>hibernate-validator</artifactId>
-	    	<version>4.2.0.Final</version>
-	    </dependency>
-	    
-	    <dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-entitymanager</artifactId>
-			<version>4.2.8.Final</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-annotations</artifactId>
-			<version>3.5.6-Final</version>
-		</dependency>
-		
-	    
-	    <dependency>
-	    	<groupId>mysql</groupId>
-	    	<artifactId>mysql-connector-java</artifactId>
-	    	<version>5.1.9</version>
-	    </dependency>
-	    
-	    <dependency>
-	    	<groupId>commons-dbcp</groupId>
-	    	<artifactId>commons-dbcp</artifactId>
-	    	<version>20030825.184428</version>
-	    </dependency>
-	    
-	    <dependency>
-	    	<groupId>commons-pool</groupId>
-	    	<artifactId>commons-pool</artifactId>
-	    	<version>20030825.183949</version>
-	    </dependency>
+
+
+	    <!-- Hibernate -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>3.5.4-Final</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>5.0.1.Final</version>
+        </dependency>
 
     </dependencies>
 

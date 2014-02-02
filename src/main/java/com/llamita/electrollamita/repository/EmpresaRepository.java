@@ -12,12 +12,12 @@ import org.springframework.transaction.annotation.Transactional;
 import com.llamita.electrollamita.model.Empresa;
 
 @Repository
+@Transactional
 public class EmpresaRepository {
 	
 	@Autowired
 	private SessionFactory sessionFactory;
-	
-	@Transactional
+
 	public void addEmpresa(Empresa empresa){
 		try{
 		    Session session = sessionFactory.getCurrentSession();
@@ -28,9 +28,11 @@ public class EmpresaRepository {
 	    	e.printStackTrace();
 	    }
 	}
-	
-	public List<Empresa> empresas(){
-		return null;
+
+	public Empresa empresas() {
+
+        Session session = sessionFactory.getCurrentSession();
+        return (Empresa)session.get(Empresa.class, 1);
 	}
 
 }

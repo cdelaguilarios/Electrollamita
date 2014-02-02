@@ -22,6 +22,7 @@
         <param-name>contextConfigLocation</param-name>
         <param-value>
             /WEB-INF/electrollamita-applicationcontext.xml
+            /WEB-INF/electrollamita-hibernate.xml
         </param-value>
     </context-param>
 
