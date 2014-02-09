@@ -12,7 +12,7 @@ public class Empresa {
 
 	@Id
 	@GeneratedValue
-	@Column(name="IN_ID")
+	@Column(name="IN_IDEMPRESA")
 	private Integer id;
 	
 	@Column(name="VC_USUARIO")
@@ -21,13 +21,13 @@ public class Empresa {
 	@Column(name="VC_CONTRASENA")
 	private String contrasena;
 	
-	@Column(name="VC_RAZON_SOCIAL")
+	@Column(name="VC_RAZONSOCIAL")
 	private String razonSocial;
 	
 	@Column(name="VC_RUC")
 	private String ruc;
 	
-	@Column(name="BT_ESTADO")
+	@Column(name="CH_ESTADO")
 	private boolean estado;
 	
 	public Empresa(){
