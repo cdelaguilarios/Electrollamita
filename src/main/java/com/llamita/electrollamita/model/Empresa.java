@@ -15,12 +15,6 @@ public class Empresa {
 	@Column(name="IN_IDEMPRESA")
 	private Integer id;
 	
-	@Column(name="VC_USUARIO")
-	private String usuario;
-	
-	@Column(name="VC_CONTRASENA")
-	private String contrasena;
-	
 	@Column(name="VC_RAZONSOCIAL")
 	private String razonSocial;
 	
@@ -40,22 +34,6 @@ public class Empresa {
 
 	public void setId(Integer id) {
 		this.id = id;
-	}
-
-	public String getUsuario() {
-		return usuario;
-	}
-
-	public void setUsuario(String usuario) {
-		this.usuario = usuario;
-	}
-
-	public String getContrasena() {
-		return contrasena;
-	}
-
-	public void setContrasena(String contrasena) {
-		this.contrasena = contrasena;
 	}
 
 	public String getRazonSocial() {
