@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="../../css/fullcalendar.css" th:href="@{/admin/css/fullcalendar.css}"/>	
 		<link rel="stylesheet" href="../../css/unicorn.main.css" th:href="@{/admin/css/unicorn.main.css}"/>
 		<link rel="stylesheet" href="../../css/unicorn.grey.css" class="skin-color" th:href="@{/admin/css/unicorn.grey.css}"/>
+		<link rel="stylesheet" href="../../css/font-awesome.css" class="skin-color" th:href="@{/admin/css/font-awesome.css}"/>
 	</head>
 	<body>
 		<div id="header">
@@ -25,12 +26,17 @@
 		<div id="sidebar">
 			<!--<a href="#" class="hide"><i class="glyphicon glyphicon-home"></i> Dashboard</a>-->
 			<ul>
-				<li class="active"><a href="index"><i class="glyphicon glyphicon-home"></i> <span>General</span></a></li>	
-				<li><a href="empresa"><i class="glyphicon glyphicon-th"></i> <span>Empresas</span></a></li>				
-				<li><a href="clientes"><i class="glyphicon glyphicon-th"></i> <span>Clientes</span></a></li>		
-				<li><a href="medidor"><i class="glyphicon glyphicon-th"></i> <span>Medidor</span></a></li>		
-				<li><a href="tarifa"><i class="glyphicon glyphicon-th"></i> <span>Tarifa</span></a></li>		
-				<li><a href="contrato"><i class="glyphicon glyphicon-th"></i> <span>Contrato</span></a></li>
+				<li class="active"><a href="index"><i class="glyphicon glyphicon-home"></i><span>General</span></a></li>	
+				<li><a href="clientes"><i class="fa fa-users fa-lg"></i> <span>Clientes</span></a></li>		
+				<li><a href="medidores"><i class="fa fa-bolt fa-lg"></i> <span>Medidores</span></a></li>			
+				<li><a href="leturas"><i class="glyphicon glyphicon-tasks"></i><span>Lecturas</span></a></li>	
+				<li class="submenu">
+					<a href="#"><i class="fa fa-dollar fa-lg"></i> <span>Facturacion</span> <span class="label">2</span></a>
+					<ul>
+						<li><a href="">Recibos</a></li>
+						<li><a href="">Configuraci&oacute;n</a></li>
+					</ul>
+				</li>
 			</ul>		
 		</div>
 		
@@ -39,7 +45,7 @@
 		</div>
 		<div class="row">
 			<div id="footer" class="col-12">
-				2013 - 2014 &copy; Como la llamita.
+				2010 - 2014 &copy; Como la llamita.
 			</div>
 		</div>
 
