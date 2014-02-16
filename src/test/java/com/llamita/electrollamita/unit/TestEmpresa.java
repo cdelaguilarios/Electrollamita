@@ -29,8 +29,6 @@ public class TestEmpresa {
 		try{
 			
 			Empresa empresa = new Empresa();
-			empresa.setUsuario("Llamita");
-			empresa.setContrasena("llamita");
 			empresa.setRazonSocial("Como La Llamita");
 			empresa.setRuc("1111111111111");
 			

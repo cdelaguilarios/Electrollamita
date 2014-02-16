@@ -19,6 +19,11 @@
         <property name="annotatedClasses">
             <list>
                 <value>com.llamita.electrollamita.model.Empresa</value>
+                <value>com.llamita.electrollamita.model.Cliente</value>
+                <value>com.llamita.electrollamita.model.Contrato</value>
+                <value>com.llamita.electrollamita.model.Medidor</value>
+                <value>com.llamita.electrollamita.model.TipoUsuario</value>
+                <value>com.llamita.electrollamita.model.Usuario</value>
             </list>
 
         </property>
