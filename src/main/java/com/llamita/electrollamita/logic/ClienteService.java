@@ -18,4 +18,8 @@ public class ClienteService {
 		clienteRepository.guardarCliente(cliente);
 	}
 	
+	public Cliente recuperarClientePorId(int idCliente){
+		return clienteRepository.findById(idCliente);
+	}
+	
 }

@@ -30,7 +30,7 @@ public class ClienteRepository {
 		Session session = sessionFactory.getCurrentSession();
 		try{
 			tx = session.beginTransaction();
-			session.save(cliente);
+			session.saveOrUpdate(cliente);
 			
 			tx.commit();
 		}catch(Exception e){
@@ -44,6 +44,11 @@ public class ClienteRepository {
 //    			session.close();
 //    		}
 		}
+	}
+	
+	public Cliente findById(int idCliente){
+		Session session = sessionFactory.getCurrentSession();
+		return (Cliente)session.get(Cliente.class, idCliente); 
 	}
 	
 }
