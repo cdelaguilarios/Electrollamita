@@ -11,6 +11,7 @@ import com.llamita.electrollamita.repository.ClienteRepository;
 import com.llamita.electrollamita.repository.EmpresaRepository;
 import com.llamita.electrollamita.util.Caster;
 import com.llamita.electrollamita.view.ClienteBean;
+import com.llamita.electrollamita.view.MedidorBean;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -83,6 +84,14 @@ public class ClienteController {
         modelMap.addAttribute("clientes", clientes);
         
         return "/cliente/clientes";
+    }
+    
+    @RequestMapping(value="/addMedidor/{idCliente}",method=RequestMethod.GET)
+    public String initFormAddMedidor(@PathVariable int idCliente,ModelMap modelMap){
+    	MedidorBean medidor = new MedidorBean(); 
+    	medidor.setIdCliente(idCliente);
+    	modelMap.addAttribute("medidor", medidor);
+    	return "/cliente/addMedidor";
     }
     
 }

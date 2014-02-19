@@ -1,0 +1,74 @@
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layouts/base">
+	
+	<div layout:fragment="content">
+	
+		<div id="content-header">
+			<h1>Agregar Medidor</h1>
+		</div>
+		
+		<div class="row">
+			<div class="col-12">
+				<div class="widget-box">
+					<div class="widget-title">
+						<span class="icon">
+							<i class="glyphicon glyphicon-align-justify"></i>									
+						</span>
+						<!-- <h5>Agregar Medidor</h5>-->
+					</div>
+					<div class="widget-content nopadding">
+						<form class="form-horizontal" method="post" action="#" th:action="@{/addMedidor}" th:object="${medidor}" name="basic_validate" id="basic_validate" novalidate="novalidate">
+                           <div class="form-group" th:class="${#fields.hasErrors('numero')}? 'form-group has-error' : 'form-group'">
+                               <label class="control-label">Numero</label>
+                               <div class="controls">
+                                   <input type="text" class="form-control input-small" name="numero" id="numero" th:field="*{numero}" /><br/>
+                                   <span class="help-inline" for="numero" th:if="${#fields.hasErrors('numero')}" th:errors="*{numero}">Incorrect Numero</span>
+                               </div>
+                           </div>
+                           <div class="form-group" th:class="${#fields.hasErrors('caracteristica')}? 'form-group has-error' : 'form-group'">
+                               <label class="control-label">Caracteristica</label>
+                               <div class="controls">
+                                   <input type="text" class="form-control input-small" name="caracteristica" id="caracteristica" th:field="*{caracteristica}" /><br/>
+                                   <span class="help-inline" for="caracteristica" th:if="${#fields.hasErrors('caracteristica')}" th:errors="*{caracteristica}">Incorrect Caracteristica</span>
+                               </div>
+                           </div>
+                           <div class="form-group" th:class="${#fields.hasErrors('tipoMedidor')}? 'form-group has-error' : 'form-group'">
+                               <label class="control-label">Tipo de Medidor</label>
+                               <div class="controls">
+                                   <input type="text" class="form-control input-small" name="tipoMedidor" id="tipoMedidor" th:field="*{tipoMedidor}"/><br/>
+                                   <span class="help-inline" for="tipoMedidor" th:if="${#fields.hasErrors('tipoMedidor')}" th:errors="*{tipoMedidor}">Incorrect Tipo de Medidor</span>
+                               </div>
+                           </div>
+                           <div class="form-group" th:class="${#fields.hasErrors('tipoConexion')}? 'form-group has-error' : 'form-group'">
+                               <label class="control-label">Tipo de Conexion</label>
+                               <div class="controls">
+                                   <input type="text" class="form-control input-small" name="tipoConexion" id="tipoConexion" th:field="*{tipoConexion}" /><br/>
+                                   <span class="help-inline" for="tipoConexion" th:if="${#fields.hasErrors('tipoConexion')}" th:errors="*{tipoConexion}">Incorrect Tipo de Conexion</span>
+                               </div>
+                           </div>
+                           <div class="form-group" th:class="${#fields.hasErrors('tension')}? 'form-group has-error' : 'form-group'">
+                               <label class="control-label">Tension</label>
+                               <div class="controls">
+                                   <input type="text" class="form-control input-small" name="tension" id="tension" th:field="*{tension}" /><br/>
+                                   <span class="help-inline" for="tension" th:if="${#fields.hasErrors('tension')}" th:errors="*{tension}">Incorrect Tension</span>
+                               </div>
+                           </div>
+                           <div class="form-group" th:class="${#fields.hasErrors('conexion')}? 'form-group has-error' : 'form-group'">
+                               <label class="control-label">Conexion</label>
+                               <div class="controls">
+                                   <input type="text" class="form-control input-small" name="conexion" id="conexion" th:field="*{conexion}" /><br/>
+                                   <span class="help-inline" for="conexion" th:if="${#fields.hasErrors('conexion')}" th:errors="*{conexion}">Incorrect Conexion</span>
+                               </div>
+                           </div>
+                           <div class="form-actions">
+                               <input type="submit" value="Agregar" class="btn btn-primary" />
+                           </div>
+                       </form>
+					</div>
+				</div>			
+			</div>
+		</div>
+	
+	</div>
+</html>
